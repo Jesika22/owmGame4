@@ -23,6 +23,8 @@ function preload() {
 
   certi1img = loadImage("images/certificate.png")
 }
+
+
 function setup() {
   createCanvas(800,700);
   maze1 = new Group();
@@ -42,7 +44,7 @@ function setup() {
   certi1.addImage(certi1img);
   certi1.scale = 0.05;
 
-  level=3;
+  level=1;
   gameState=0;
 
   level1maze1 = createSprite(70,120,70,200);
@@ -272,6 +274,13 @@ else if(level >=6){
 
 
 function gameStateControl(){
+ 
+
+
+
+ 
+ 
+
 
  
   if(gameState === 0){
