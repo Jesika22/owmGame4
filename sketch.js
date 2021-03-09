@@ -31,6 +31,7 @@ function setup() {
   maze2 = new Group();
   maze3 = new Group();
   maze4 = new Group();
+  maze5 = new Group();
   
   girl = createSprite(70,250);
   girl.addImage("girlLevel1",girlimg1);
@@ -45,7 +46,7 @@ function setup() {
   certi1.addImage(certi1img);
   certi1.scale = 0.05;
 
-  level=4;
+  level=5;
   gameState=0;
 
   level1maze1 = createSprite(70,120,70,200);
@@ -138,6 +139,54 @@ function setup() {
   level4maze32= createSprite(360,502,200,40);
   level4maze33= createSprite(170,583,170,40);
   level4maze34= createSprite(550,583,170,40);
+
+  level5maze1 = createSprite(400,48,720,30);
+  level5maze2 = createSprite(390,650,700,30);
+  level5maze3 = createSprite(750,390,30,550);
+  level5maze4 = createSprite(50,300,30,600);
+  level5maze5 = createSprite(130,176,30,150);
+  level5maze6 = createSprite(210,120,30,150);
+  level5maze7 = createSprite(590,120,30,150);
+  level5maze8 = createSprite(670,180,30,150);
+  level5maze9 = createSprite(440,90,30,80);
+  level5maze10= createSprite(210,280,30,80);
+  level5maze11= createSprite(285,220,30,90);
+  level5maze12= createSprite(365,240,30,150);
+  level5maze13= createSprite(438,220,30,90);
+  level5maze14= createSprite(515,285,30,90);
+  level5maze15= createSprite(130,450,30,150);
+  level5maze16= createSprite(210,550,30,85);
+  level5maze17= createSprite(290,505,30,260);
+  level5maze18= createSprite(360,450,30,150);
+  level5maze19= createSprite(440,420,30,220);
+  level5maze20= createSprite(670,387,30,165);
+  level5maze21= createSprite(513,580,30,150);
+  level5maze22= createSprite(670,550,30,90);
+  level5maze23= createSprite(210,410,30,90);
+  level5maze24= createSprite(400,115,250,30);
+  level5maze25= createSprite(540,180,100,30);
+  level5maze26= createSprite(700,120,100,30);
+  level5maze27= createSprite(180,250,250,30);
+  level5maze28= createSprite(560,250,220,30);
+  level5maze29= createSprite(280,320,320,30);
+  level5maze30= createSprite(560,318,100,30);
+  level5maze31= createSprite(100,390,80,30);
+  level5maze32= createSprite(240,386,80,30);
+  level5maze33= createSprite(170,515,80,30);
+  level5maze34= createSprite(100,585,90,30);
+  level5maze35= createSprite(390,515,80,30);
+  level5maze36= createSprite(425,585,150,30);
+  level5maze37= createSprite(620,585,80,30);
+  level5maze38= createSprite(550,450,220,30);
+  level5maze39= createSprite(530,380,150,30);
+  level5maze40= createSprite(590,520,150,30);
+  
+  
+  
+  
+
+
+
   
 
 
@@ -221,7 +270,7 @@ function setup() {
   maze4.add(level4maze21);
   maze4.add(level4maze22);
   maze4.add(level4maze23);
-  maze4.add(level4maze24);
+  //maze4.add(level4maze24);
   maze4.add(level4maze25);
   maze4.add(level4maze26);
   maze4.add(level4maze27);
@@ -232,6 +281,48 @@ function setup() {
   maze4.add(level4maze32);
   maze4.add(level4maze33);
   maze4.add(level4maze34);
+
+  maze5.add(level5maze1);
+  maze5.add(level5maze2);
+  maze5.add(level5maze3);
+  maze5.add(level5maze4);
+  maze5.add(level5maze5);
+  maze5.add(level5maze6);
+  maze5.add(level5maze7);
+  maze5.add(level5maze8);
+  maze5.add(level5maze9);
+  maze5.add(level5maze10);
+  maze5.add(level5maze11);
+  maze5.add(level5maze12);
+  maze5.add(level5maze13);
+  maze5.add(level5maze14);
+  maze5.add(level5maze15);
+  maze5.add(level5maze16);
+  maze5.add(level5maze17);
+  maze5.add(level5maze18);
+  maze5.add(level5maze19);
+  maze5.add(level5maze20);
+  maze5.add(level5maze21);
+  maze5.add(level5maze22);
+  maze5.add(level5maze23);
+  maze5.add(level5maze24);
+  maze5.add(level5maze25);
+  maze5.add(level5maze26);
+  maze5.add(level5maze27);
+  maze5.add(level5maze28);
+  maze5.add(level5maze29);
+  maze5.add(level5maze30);
+  maze5.add(level5maze31);
+  maze5.add(level5maze32);
+  maze5.add(level5maze33);
+  maze5.add(level5maze34);
+  maze5.add(level5maze35);
+  maze5.add(level5maze36);
+  maze5.add(level5maze37);
+  maze5.add(level5maze38);
+  maze5.add(level5maze39);
+  maze5.add(level5maze40);
+  
   
 
 
@@ -250,6 +341,7 @@ function setup() {
   maze2.setVisibleEach(false);
   maze3.setVisibleEach(false);
   maze4.setVisibleEach(false);
+  maze5.setVisibleEach(false);
  
   
 }
@@ -288,9 +380,9 @@ else if(level === 3){
 else if(level === 4){
   background(backgr4);
   girl.changeImage("girlLevel4",girlimg4);
-  
-  girl.x = 450;
-  girl.y = 50;
+  girl.collide(maze4);
+  //girl.x = 450;
+  //girl.y = 50;
   gameStateControl(); 
 
 }
@@ -298,8 +390,9 @@ else if(level === 4){
 else if(level === 5){
   background(backgr5);
   girl.changeImage("girlLevel5",girlimg5);
-  girl.x = 70;
-  girl.y = 100;
+  girl.x = 80;
+  girl.y = 620;
+  //girl.collide(maze5);
   gameStateControl(); 
 
 }
