@@ -30,6 +30,7 @@ function setup() {
   maze1 = new Group();
   maze2 = new Group();
   maze3 = new Group();
+  maze4 = new Group();
   
   girl = createSprite(70,250);
   girl.addImage("girlLevel1",girlimg1);
@@ -44,7 +45,7 @@ function setup() {
   certi1.addImage(certi1img);
   certi1.scale = 0.05;
 
-  level=1;
+  level=4;
   gameState=0;
 
   level1maze1 = createSprite(70,120,70,200);
@@ -65,7 +66,7 @@ function setup() {
 
   level2maze1 = createSprite(400,95,600,40);
   level2maze2 = createSprite(110,125,40,100);
-  level2maze3 = createSprite(156,180,80,40);
+  level2maze3 = createSprite(156,180,80,30);
   level2maze4 = createSprite(690,280,40,335);  
   level2maze5 = createSprite(108,445,40,345);
   level2maze6 = createSprite(380,600,600,40);
@@ -104,38 +105,39 @@ function setup() {
   level3maze20= createSprite(680,270,110,65);
   level3maze21= createSprite(625,370,130,65);
 
-  level4maze1 = createSprite();
-  level4maze2 = createSprite();
-  level4maze3 = createSprite();
-  level4maze4 = createSprite();
-  level4maze5 = createSprite();
-  level4maze6 = createSprite();
-  level4maze7 = createSprite();
-  level4maze8 = createSprite();
-  level4maze9 = createSprite();
-  level4maze10= createSprite();
-  level4maze11= createSprite();
-  level4maze12= createSprite();
-  level4maze13= createSprite();
-  level4maze14= createSprite();
-  level4maze15= createSprite();
-  level4maze16= createSprite();
-  level4maze17= createSprite();
-  level4maze18= createSprite();
-  level4maze19= createSprite();
-  level4maze20= createSprite();
-  level4maze21= createSprite();
-  level4maze22= createSprite();
-  level4maze23= createSprite();
-  level4maze25= createSprite();
-  level4maze26= createSprite();
-  level4maze27= createSprite();
-  level4maze28= createSprite();
-  level4maze29= createSprite();
-  level4maze30= createSprite();
-  level4maze31= createSprite();
-  level4maze32= createSprite();
-  level4maze33= createSprite();
+  level4maze1 = createSprite(50,390,60,700);
+  level4maze2 = createSprite(250,60,375,50);
+  level4maze3 = createSprite(650,60,250,50);
+  level4maze4 = createSprite(750,390,60,700);
+  level4maze5 = createSprite(160,670,200,50);
+  level4maze6 = createSprite(520,670,400,50);
+  level4maze7 = createSprite(280,100,40,80);
+  level4maze8 = createSprite(150,170,40,70);
+  level4maze9 = createSprite(265,150,260,40);
+  level4maze10= createSprite(650,370,40,480);
+  level4maze11= createSprite(150,370,40,235);
+  level4maze12= createSprite(240,345,40,120);
+  level4maze13= createSprite(330,415,40,60);
+  level4maze14= createSprite(470,370,40,145);
+  level4maze15= createSprite(560,448,40,150);
+  level4maze16= createSprite(150,570,40,70);
+  level4maze17= createSprite(240,490,40,70);
+  level4maze18= createSprite(330,548,40,115);
+  level4maze19= createSprite(465,548,40,110);
+  level4maze20= createSprite(375,270,40,110);
+  level4maze21= createSprite(465,195,40,100);
+  level4maze22= createSprite(560,270,40,110);
+  level4maze23= createSprite(560,145,170,40);
+  level4maze25= createSprite(350,225,230,40);
+  level4maze26= createSprite(340,303,50,40);
+  level4maze27= createSprite(105,350,50,40);
+  level4maze28= createSprite(365,583,50,40);
+  level4maze29= createSprite(645,270,150,40);
+  level4maze30= createSprite(250,390,180,40);
+  level4maze31= createSprite(440,422,200,40);
+  level4maze32= createSprite(360,502,200,40);
+  level4maze33= createSprite(170,583,170,40);
+  level4maze34= createSprite(550,583,170,40);
   
 
 
@@ -196,19 +198,59 @@ function setup() {
   maze3.add(level3maze20);
   maze3.add(level3maze21);
 
+  maze4.add(level4maze1);
+  maze4.add(level4maze2);
+  maze4.add(level4maze3);
+  maze4.add(level4maze4);
+  maze4.add(level4maze5);
+  maze4.add(level4maze6);
+  maze4.add(level4maze7);
+  maze4.add(level4maze8);
+  maze4.add(level4maze9);
+  maze4.add(level4maze10);
+  maze4.add(level4maze11);
+  maze4.add(level4maze12);
+  maze4.add(level4maze13);
+  maze4.add(level4maze14);
+  maze4.add(level4maze15);
+  maze4.add(level4maze16);
+  maze4.add(level4maze17);
+  maze4.add(level4maze18);
+  maze4.add(level4maze19);
+  maze4.add(level4maze20);
+  maze4.add(level4maze21);
+  maze4.add(level4maze22);
+  maze4.add(level4maze23);
+  maze4.add(level4maze24);
+  maze4.add(level4maze25);
+  maze4.add(level4maze26);
+  maze4.add(level4maze27);
+  maze4.add(level4maze28);
+  maze4.add(level4maze29);
+  maze4.add(level4maze30);
+  maze4.add(level4maze31);
+  maze4.add(level4maze32);
+  maze4.add(level4maze33);
+  maze4.add(level4maze34);
+  
+
+
+
+  
+  
+
+
+
 
 
   
  
 
-  
-
-
-
-
   maze1.setVisibleEach(false);
   maze2.setVisibleEach(false);
   maze3.setVisibleEach(false);
+  maze4.setVisibleEach(false);
+ 
   
 }
 
@@ -228,10 +270,8 @@ else if(level === 2){
   background(backgr2);
   girl.changeImage("girlLevel2",girlimg2);
   girl.collide(maze2);
-  girl.x = 100;
-  girl.y = 220;
   gameStateControl();
-  
+  girl.debug = true;
  
 
 }
@@ -239,24 +279,25 @@ else if(level === 2){
 else if(level === 3){
   background(backgr3);
   girl.changeImage("girlLevel3",girlimg3);
-  girl.x = 710;
-  girl.y = 600;
+  girl.collide(maze3);
+ 
   gameStateControl(); 
 
 }
 
 else if(level === 4){
   background(backgr4);
-  girl.changeImage("girlLvel4",girlimg2);
-  girl.x = 70;
-  girl.y = 100;
+  girl.changeImage("girlLevel4",girlimg4);
+  
+  girl.x = 450;
+  girl.y = 50;
   gameStateControl(); 
 
 }
 
 else if(level === 5){
   background(backgr5);
-  girl.changeImage("girlLevel5",girlimg2);
+  girl.changeImage("girlLevel5",girlimg5);
   girl.x = 70;
   girl.y = 100;
   gameStateControl(); 
@@ -274,20 +315,20 @@ else if(level >=6){
 
 
 function gameStateControl(){
- 
-
-
-
- 
- 
-
-
- 
+  
   if(gameState === 0){
     textSize(40);
     fill("red");
     stroke("yellow");
     text("Press SPACE to start",width/2 -150,height/2);
+
+    if(level === 2){
+      girl.x = 100;
+      girl.y = 220;
+    }else if(level === 3){
+      girl.x = 710;
+      girl.y = 600;
+    }
 
     if(keyDown("space")){
       gameState = 1;
@@ -329,5 +370,16 @@ else if(gameState === 2){
     level = level+1;
   }
 }
+}
 
+function spawnDiamonds(){
+  if(frameCount % 100===0){
+    var diamond = createSprite(random(10,width-50),random(0,width-50));
+   // diamond.velocityX = random(-8,8);
+    //diamond.velocityY = random(3,8);
+    diamond.addImage(diamondImg);
+    diamond.scale =0.04;
+    diamond.lifetime = 200;
+    diamondGroup.add(diamond);
+  }
 }
